@@ -18,6 +18,8 @@ compress([]) ->
 compress(List) ->
     compress(List, sets:new(), []).
 
+% Everything below is not relevant to the task, I was just interested in trying to implement these functions.
+
 compress_no_tail([], _) ->
     [];
 compress_no_tail([H | Tail], Set) ->
