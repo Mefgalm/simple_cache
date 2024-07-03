@@ -11,7 +11,7 @@ start_link() ->
     gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
 
 init(_Args) ->
-    ets:new(cache, [named_table]),
+    ets:new(cache, [named_table, private]),
     {ok, []}.
 
 add(Key, Value) ->
